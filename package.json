@@ -5,8 +5,8 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite",
-    "format": "prettier --write \"resources/views/**/*.blade.php\" \"app/**/*.php\" \"routes/**/*.php\" \"database/**/*.php\"",
-    "format:check": "prettier --check \"resources/views/**/*.blade.php\" \"app/**/*.php\" \"routes/**/*.php\" \"database/**/*.php\""
+    "format": "prettier --write \"**/*.php\" \"**/*.blade.php\"",
+    "format:check": "prettier --check \"**/*.php\" \"**/*.blade.php\""
   },
   "devDependencies": {
     "@prettier/plugin-php": "^0.26.0",
