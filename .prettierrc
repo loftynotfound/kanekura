@@ -1,0 +1,27 @@
+{
+  "plugins": ["prettier-plugin-blade", "@prettier/plugin-php"],
+  "tabWidth": 2,
+  "useTabs": false,
+  "singleQuote": true,
+  "printWidth": 100,
+  "overrides": [
+    {
+      "files": ["*.blade.php"],
+      "options": {
+        "parser": "blade",
+        "tabWidth": 2,
+        "bladePhpFormatting": "safe"
+      }
+    },
+    {
+      "files": ["*.php"],
+      "excludeFiles": ["*.blade.php"],
+      "options": {
+        "parser": "php",
+        "tabWidth": 2,
+        "phpVersion": "8.3",
+        "singleQuote": true
+      }
+    }
+  ]
+}
