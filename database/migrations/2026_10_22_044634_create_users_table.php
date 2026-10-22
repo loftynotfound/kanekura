@@ -16,7 +16,7 @@ return new class extends Migration {
       $table->string('email')->unique();
       $table->timestamp('email_verified_at')->nullable();
       $table->string('password');
-      $table->enum('role', ['customer', 'cashier'])->default('customer');
+      $table->enum('role', ['operator', 'cashier'])->default('operator');
       $table->enum('status', ['active', 'block'])->default('active');
       $table->unsignedTinyInteger('failed_login_attempts')->default(0);
       $table->rememberToken();
