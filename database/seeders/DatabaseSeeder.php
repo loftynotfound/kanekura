@@ -12,26 +12,8 @@ class DatabaseSeeder extends Seeder
 
   public function run(): void
   {
-    User::factory()->create([
-      'name' => 'Operator',
-      'email' => 'operator@kanekura.test',
-      'role' => 'operator',
-      'failed_login_attempts' => 0,
-    ]);
-
-    User::factory()->create([
-      'name' => 'Kasir Blokir',
-      'email' => 'kasirblokir@kanekura.test',
-      'role' => 'cashier',
-      'status' => 'block',
-      'failed_login_attempts' => 3,
-    ]);
-
-    User::factory()->create([
-      'name' => 'Kasir Aktif',
-      'email' => 'kasiraktif@kanekura.test',
-      'role' => 'cashier',
-      'failed_login_attempts' => 0,
-    ]);
+    User::factory()->operator()->create();
+    User::factory()->activeCashier()->create();
+    User::factory()->blockedCashier()->create();
   }
 }
