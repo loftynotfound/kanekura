@@ -2,18 +2,15 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Database\Factories\UserFactory;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
-  use WithoutModelEvents;
-
   public function run(): void
   {
-    User::factory()->operator()->create();
-    User::factory()->activeCashier()->create();
-    User::factory()->blockedCashier()->create();
+    UserFactory::new()->operator()->create();
+    UserFactory::new()->activeCashier()->create();
+    UserFactory::new()->blockedCashier()->create();
   }
 }

@@ -38,8 +38,6 @@ class UserFactory extends Factory
     return $this->state([
       'name' => 'Kasir Aktif',
       'email' => 'kasiraktif@kanekura.test',
-      'role' => 'cashier',
-      'status' => 'active',
     ]);
   }
 
@@ -48,7 +46,6 @@ class UserFactory extends Factory
     return $this->state([
       'name' => 'Kasir Blokir',
       'email' => 'kasirblokir@kanekura.test',
-      'role' => 'cashier',
       'status' => 'block',
       'failed_login_attempts' => 3,
     ]);
